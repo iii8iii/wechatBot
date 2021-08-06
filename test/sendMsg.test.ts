@@ -7,16 +7,16 @@ describe('sendMsg', () => {
   it('send a message', () => {
     sendMsg('this is a message from test', urls);
   });
-  it('send a message when the URL is incorrect or forbidden by WeChat', async () => {
-    const p = new Promise<void>(resolve => {
-      let a = setInterval(async () => {
-        await sendMsg('message forbidden', urls, 1);
-      }, 100);
-      setTimeout(() => {
-        clearInterval(a);
-        resolve();
-      }, 5000);
-    });
-    await p;
-  });
+  // it('send a message when the URL is incorrect or forbidden by WeChat', async () => {
+  //   const p = new Promise<void>(resolve => {
+  //     let a = setInterval(async () => {
+  //       await sendMsg('message forbidden', urls, 1);
+  //     }, 100);
+  //     setTimeout(() => {
+  //       clearInterval(a);
+  //       resolve();
+  //     }, 5000);
+  //   });
+  //   await p;
+  // });
 });
